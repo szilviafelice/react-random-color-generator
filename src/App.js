@@ -29,7 +29,7 @@ export default function App() {
             padding: '5px',
           }}
         >
-          Generated Color: {color}
+          <strong>Generated Color: {color}</strong>
         </div>
       </div>
       <button
