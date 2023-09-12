@@ -23,9 +23,14 @@ export default function App() {
         <br />
         <br />
 
-        <p>
-          <strong>Generated Color: </strong> {color}
-        </p>
+        <div
+          style={{
+            margin: '10px',
+            padding: '5px',
+          }}
+        >
+          Generated Color: {color}
+        </div>
       </div>
       <button
         onClick={() => {
