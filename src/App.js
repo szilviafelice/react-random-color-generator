@@ -6,40 +6,38 @@ export default function App() {
   const { color, generateColor } = useGenerateRandomColor();
 
   return (
-    <>
+    <div
+      style={{
+        height: '100vh',
+        width: '100vw',
+        backgroundColor: '#' + color,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <div
         style={{
-          height: '100vh',
-          width: '100vw',
-          backgroundColor: '#' + color,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          margin: '10px',
+          padding: '5px',
         }}
       >
-        <h1>Random color generator:</h1>
-
-        <br />
-        <br />
-        <br />
-
-        <div
-          style={{
-            margin: '10px',
-            padding: '5px',
+        <button
+          onClick={() => {
+            generateColor();
+            setBackgroundColor(`#${color}`);
           }}
         >
-          <strong>Generated Color: {color}</strong>
-        </div>
+          Generate
+        </button>
+        <h1>Random color generator:</h1>
+        <strong>
+          Generated Color:
+          <br />
+          <br />
+          {color}
+        </strong>
       </div>
-      <button
-        onClick={() => {
-          generateColor();
-          setBackgroundColor(`#${color}`);
-        }}
-      >
-        Generate
-      </button>
-    </>
+    </div>
   );
 }
